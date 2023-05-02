@@ -26,6 +26,10 @@
 			alert("Succesfully registered");
 		}
 		
+			function close_window() {
+    		close();
+		}
+
 		function checkData(){
 			const enterEmail = document.getElementById('loginemail').value;
 			const enterPwd = document.getElementById('loginpwd').value;
@@ -36,13 +40,10 @@
 		
 
 		  	if (enterEmail === getEmail && enterPwd === getPwd) {
+				window.close();
+				window.open("mainpage.html");
 				
-				self.close();
-				window.open('mainpage.html');
-				
-				alert("Log in successful!");
-				
-				
+
 		  	} 
 			else {
 			alert("Invalid username or password.");

@@ -37,8 +37,12 @@
 
 		  	if (enterEmail === getEmail && enterPwd === getPwd) {
 				
-				window.location.href = "https://it223-web-system-and-technologies.github.io/elaco_callo_finalpitmainpage/index.html";
+				window.close();
+				window.open('./mainpage.html');
+				
 				alert("Log in successful!");
+				
+				
 		  	} 
 			else {
 			alert("Invalid username or password.");
@@ -64,7 +68,7 @@
 		<button onclick="checkData()">Login</button>
         <!-- <input type="submit" value="Submit" onclick="checkData()"> -->
 		</form>
-		<p>Don't have an account? <a href="#" onclick="register()">Register here.</a></p>
+		<p>Don't have an account? <button onclick="register()">Register here.</button></p>
 	</div>
 
 	<div class="register-container hidden">
@@ -73,13 +77,13 @@
 		<form>
 	    <input type="text" id="registeremail" placeholder="Username" required>
         <br><br>
-        <input type="password" id="registerpwd" placeholder="Password" required>
+        <input type="password" id="registerpwd" placeholder="Password" required autocomplete="off">
         <br><br>
-		<button onclick="addData()">Register</button>
+		<button type="reset" onclick="addData()">Register</button>
         <!--<input type="submit" value="Submit" onclick="addData()"> -->
 
 		</form>
-		<p>Already have an account? <a href="#" onclick="login()">Login here.</a></p>
+		<p>Already have an account? <button onclick="login()">Login here.</button></p>
 	</div>
 </body>
 </html>

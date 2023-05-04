@@ -26,9 +26,6 @@
 			alert("Succesfully registered");
 		}
 		
-			function close_window() {
-    		close();
-		}
 
 		function checkData(){
 			const enterEmail = document.getElementById('loginemail').value;
@@ -40,10 +37,8 @@
 		
 
 		  	if (enterEmail === getEmail && enterPwd === getPwd) {
-				window.close();
-				window.open("mainpage.html");
-				
-
+				window.location.href = "https://it223-web-system-and-technologies.github.io/elaco_callo_finalpitmainpage/index.html";
+				alert("Login Successfully!");
 		  	} 
 			else {
 			alert("Invalid username or password.");
